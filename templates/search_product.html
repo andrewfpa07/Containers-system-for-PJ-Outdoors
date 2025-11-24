@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Product</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Search Product</h1>
+    <form method="POST">
+        <label>Product Name:</label><br>
+        <input type="text" name="name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h2>Results:</h2>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Name</th>
+                <th>Container</th>
+                <th>Side</th>
+                <th>Shelf</th>
+                <th>Quantity</th>
+            </tr>
+            {% for row in results %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <br>
+    <a href="/add">Add New Product</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form method="POST">
+        <label>Product Name:</label><br>
+        <input type="text" name="name" required><br>
+        <label>Container Number:</label><br>
+        <input type="number" name="container" required><br>
+        <label>Side (A/B):</label><br>
+        <input type="text" name="side" maxlength="1" required><br>
+        <label>Shelf Number:</label><br>
+        <input type="number" name="shelf" required><br>
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity"><br><br>
+        <button type="submit">Add Product</button>
+    </form>
+    <br>
+    <a href="/search">Go to Search</a>
+</body>
+</html>
