@@ -1,0 +1,92 @@
+/* GENERAL BODY */
+body {
+    background-color: #d3d3d3; /* light grey background */
+    color: #000000; /* default text black */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #ff6600;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.navbar a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* CONTAINER CARDS */
+.container-card {
+    background-color: #f0f0f0; /* slightly lighter grey */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.btn-primary { background-color: #ff6600; border: none; color: #fff; }
+.btn-primary:hover { background-color: #e65c00; }
+.btn-secondary { background-color: #777; border: none; color: #fff; }
+.btn-secondary:hover { background-color: #666; }
+.btn-success { background-color: #ff8c33; border: none; color: #fff; }
+.btn-success:hover { background-color: #ff7f00; }
+.btn-outline-info { border-color: #ff6600; color: #ff6600; }
+.btn-outline-info:hover { background-color: #ff6600; color: #fff; }
+
+/* TABLES */
+.table th {
+    background-color: #ffa64d; 
+    color: #000;
+}
+.table-striped>tbody>tr:nth-of-type(odd) { background-color: #eaeaea; }
+.table-striped>tbody>tr:nth-of-type(even) { background-color: #f5f5f5; }
+.table-striped>tbody>tr:hover { background-color: #ffd9b3; }
+.low-stock { background-color: #ff9999 !important; color: #000 !important; }
+
+/* FORMS */
+.form-control {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+.form-control::placeholder {
+    color: #888;
+}
+.form-control:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px #ff6600;
+}
+
+/* FOOTER */
+footer {
+    background-color: #d3d3d3;
+    color: #444;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5 {
+    color: #000;
+}
+
+/* LINKS */
+a {
+    color: #ff6600;
+}
+a:hover {
+    color: #e65c00;
+    text-decoration: none;
+}

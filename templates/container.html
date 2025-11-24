@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Product</title>
+    <title>Container {{ container_id }}</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -15,40 +15,32 @@
 
 <div class="container mt-5">
     <div class="container-card">
-        <h2>Search Product</h2>
-        <form method="POST">
-            <div class="mb-3">
-                <label>Product Name:</label>
-                <input class="form-control" type="text" name="name" placeholder="Enter product name..." required>
-            </div>
-            <button class="btn btn-primary w-100" type="submit">Search</button>
-        </form>
-
-        {% if results %}
-        <h3 class="mt-4">Results:</h3>
-        <table class="table table-striped mt-2">
+        <h2>Container {{ container_id }}</h2>
+        {% if products %}
+        <table class="table table-striped mt-3">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Container</th>
+                    <th>Product Name</th>
                     <th>Side</th>
                     <th>Shelf</th>
                     <th>Quantity</th>
                 </tr>
             </thead>
             <tbody>
-                {% for p in results %}
-                <tr class="{% if p[4] <=5 %}low-stock{% endif %}">
+                {% for p in products %}
+                <tr class="{% if p[3] <=5 %}low-stock{% endif %}">
                     <td>{{ p[0] }}</td>
                     <td>{{ p[1] }}</td>
                     <td>{{ p[2] }}</td>
                     <td>{{ p[3] }}</td>
-                    <td>{{ p[4] }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        {% else %}
+        <p>No products in this container.</p>
         {% endif %}
+        <a class="btn btn-secondary mt-3 w-100" href="/">Back to Home</a>
     </div>
 </div>
 

@@ -5,21 +5,48 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Add Product</h1>
-    <form method="POST">
-        <label>Product Name:</label><br>
-        <input type="text" name="name" required><br>
-        <label>Container Number:</label><br>
-        <input type="number" name="container" required><br>
-        <label>Side (A/B):</label><br>
-        <input type="text" name="side" maxlength="1" required><br>
-        <label>Shelf Number:</label><br>
-        <input type="number" name="shelf" required><br>
-        <label>Quantity:</label><br>
-        <input type="number" name="quantity"><br><br>
-        <button type="submit">Add Product</button>
-    </form>
-    <br>
-    <a href="/search">Go to Search</a>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/add">Add Product</a>
+    <a href="/search">Search</a>
+    <a href="/index">All Products</a>
+</div>
+
+<div class="container mt-5">
+    <div class="container-card">
+        <h2>Add a New Product</h2>
+        <form method="POST">
+            <div class="mb-3">
+                <label>Product Name:</label>
+                <input class="form-control" type="text" name="name" placeholder="e.g., Hiking Boots" required>
+            </div>
+            <div class="mb-3">
+                <label>Container Number:</label>
+                <input class="form-control" type="number" name="container" placeholder="1, 2, 3..." required>
+            </div>
+            <div class="mb-3">
+                <label>Side (A/B):</label>
+                <input class="form-control" type="text" name="side" maxlength="1" placeholder="A or B" required>
+            </div>
+            <div class="mb-3">
+                <label>Shelf Number:</label>
+                <input class="form-control" type="number" name="shelf" placeholder="1, 2, 3..." required>
+            </div>
+            <div class="mb-3">
+                <label>Quantity:</label>
+                <input class="form-control" type="number" name="quantity" placeholder="0">
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Add Product</button>
+        </form>
+        <br>
+        <a class="btn btn-secondary w-100" href="/search">Go to Search</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 PJ Outdoors Inventory System
+</footer>
+
 </body>
 </html>
